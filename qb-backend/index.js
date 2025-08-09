@@ -14,7 +14,7 @@ app.use('/api/resources', resourceRoutes)
 
 mongoose.connect(process.env.MONGOOSE_URI).then(()=>{
     console.log('mongodb connected');
-    app.listen(process.env.PORT, ()=>{
+    app.listen(process.env.PORT || 5000, ()=>{
         console.log('app is running on port ', process.env.PORT)
     })
 })
